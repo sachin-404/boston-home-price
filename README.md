@@ -1,1 +1,1 @@
-# boston-home-price
+# Boston Home Price Prediction
