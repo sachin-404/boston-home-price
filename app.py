@@ -13,6 +13,7 @@ scalar = pickle.load(open('scaling.pkl', 'rb'))
 
 @app.route('/')
 def home():
+    print("hello")
     return render_template('home.html')
     
 @app.route('/predict_api', methods=['POST'])
@@ -35,4 +36,4 @@ def predict():
     return render_template("home.html", prediction_text="The predicted house price is {}".format(output))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0')
